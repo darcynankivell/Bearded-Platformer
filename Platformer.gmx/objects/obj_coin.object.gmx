@@ -3,7 +3,7 @@
   <spriteName>spr_coin</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -53,9 +53,16 @@ image_index = 0;
             <kind>1</kind>
             <string>///Coin collision
 
-if (instance_position(obj_coin.x + 16 || obj_coin.x - 16 || obj_coin.y + 16 || obj_coin.y - 16) {
+if (instance_position(obj_coin.x, obj_coin.y, obj_character)) {
     instance_destroy();
     money++;
+    exit;
+}
+
+if (instance_position(obj_coin.x - obj_character.width, obj_coin.y - obj_character.height, obj_character)) {
+    instance_destroy();
+    money++;
+    exit;
 }
 </string>
           </argument>
