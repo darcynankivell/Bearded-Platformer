@@ -10,14 +10,19 @@
     <sprite>sprites\spr_pipe</sprite>
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\spr_brick</sprite>
+    <sprite>sprites\spr_coin</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\obj_character</object>
     <object>objects\obj_pipe</object>
     <object>objects\obj_ground</object>
     <object>objects\obj_brick</object>
+    <object>objects\obj_coin</object>
+    <object>objects\obj_draw</object>
+    <object>objects\obj_variable</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room2</room>
