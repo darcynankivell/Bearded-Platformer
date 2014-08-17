@@ -59,6 +59,76 @@ height = 32;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision
+
+if ((!place_free(x/GRID,y/GRID) || !place_free(x/GRID,y/GRID + height/GRID)) &amp;&amp; hspeed &lt; 0) {
+    hspeed = 0;
+}
+
+if ((!place_free(x/GRID + width/GRID,y/GRID) || !place_free(x/GRID + width/GRID,y/GRID + height/GRID)) &amp;&amp; hspeed &gt; 0) {
+    hspeed = 0;
+}
+
+if ((!place_free(x/GRID,y/GRID) || !place_free(x/GRID + width/GRID,y/GRID)) &amp;&amp; vspeed &lt; 0) {
+    vspeed = 0;
+}
+
+if ((!place_free(x/GRID,y/GRID + height/GRID) || !place_free(x/GRID + width/GRID,y/GRID + height/GRID)) &amp;&amp; vspeed &gt; 0) {
+    vspeed = 0; //TODO not sure if this will work with gravity
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Move
+
+hspeed = 0;
+
+if (keyboard_check(vk_left)) {
+    hspeed -= 5;
+}
+
+if (keyboard_check(vk_right)) {
+    hspeed += 5;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

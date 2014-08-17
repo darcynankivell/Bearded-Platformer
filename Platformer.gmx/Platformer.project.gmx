@@ -14,7 +14,6 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\obj_character</object>
     <object>objects\obj_pipe</object>
@@ -27,6 +26,9 @@
   <rooms name="rooms">
     <room>rooms\room2</room>
   </rooms>
+  <constants number="1">
+    <constant name="GRID">32</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
